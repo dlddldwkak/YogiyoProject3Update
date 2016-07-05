@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/searchBackground"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/image_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="0.02"
+        android:adjustViewBounds="true"
+        android:baselineAlignBottom="false"
+        android:maxHeight="@dimen/serch_image_height"
+        android:maxWidth="@dimen/serch_image_width"
+        android:src="@drawable/onoff" />
+
+    <EditText
+        android:id="@+id/edit_header"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_weight="0.95"
+        android:background="@android:color/white"
+        android:hint="주소" />
+
+    <ImageView
+        android:id="@+id/image_header1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_weight="0.03"
+        android:adjustViewBounds="true"
+        android:baselineAlignBottom="false"
+        android:maxHeight="@dimen/serch_image_height"
+        android:maxWidth="@dimen/serch_image_width"
+        android:src="@drawable/location" />
+
+</LinearLayout>
