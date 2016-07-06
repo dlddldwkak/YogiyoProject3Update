@@ -1,11 +1,12 @@
 package com.example.user.yogiyoproject.deliveryList;
 
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.example.user.yogiyoproject.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,14 +15,13 @@ import java.util.List;
  */
 public class DeliveryAdapter extends RecyclerView.Adapter<DeliveryItemHolder> {
 
+    public static final int VIEW_TYPE_01 = 0;
     List<DeliveryItemData> items = new ArrayList<>();
 
     public void add(DeliveryItemData deliveryItemData){
         items.add(deliveryItemData);
         notifyDataSetChanged();
     }
-
-    public static final int VIEW_TYPE_01=0;
 
     @Override
     public DeliveryItemHolder onCreateViewHolder(ViewGroup parent, int viewType) {

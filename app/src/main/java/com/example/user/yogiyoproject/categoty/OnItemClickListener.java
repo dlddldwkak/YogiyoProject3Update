@@ -7,6 +7,6 @@ import android.view.View;
  * Created by user on 2016-07-01.
  */
 public interface OnItemClickListener {
-    public void OnItemClicked(RecyclerView.ViewHolder holder,
-                              View view, CategoryItemData itemData, int position);
+    void OnItemClicked(RecyclerView.ViewHolder holder,
+                       View view, CategoryItemData itemData, int position);
 }

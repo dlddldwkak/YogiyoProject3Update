@@ -2,8 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/menu_channel"
-        android:icon="@mipmap/ic_launcher"
+        android:id="@+id/menu_order"
+        android:icon="@drawable/zzim"
         android:orderInCategory="100"
         android:title="주문표"
         app:showAsAction="always" />

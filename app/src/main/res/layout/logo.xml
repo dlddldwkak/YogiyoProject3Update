@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/logo"
-        app:contentInsetStart="0dp">
+        app:collapseIcon="@mipmap/ic_launcher"
+        app:contentInsetStart="@dimen/logo_contentInsetstart">
 
         <ImageView
             android:id="@+id/imageView"

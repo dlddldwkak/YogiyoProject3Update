@@ -15,19 +15,16 @@ import java.util.List;
  */
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryItemHolder> {
 
-    List<CategoryItemData> items = new ArrayList<>();
-
     public static final int VIEW_TYPE_ITEM = 0;
+    List<CategoryItemData> items = new ArrayList<>();
+    OnItemClickListener mClickListener;
 
     @Override
     public int getItemViewType(int position) {
         return super.getItemViewType(position);
     }
 
-    OnItemClickListener mClickListener;
-
     public void add(CategoryItemData itemData){
-        //Log.d("tag","add");
         items.add(itemData);
         notifyDataSetChanged();
     }
@@ -50,14 +47,12 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryItemHolder> {
 
     @Override
     public void onBindViewHolder(CategoryItemHolder holder, int position) {
-        //Log.d("tag","123");
         holder.setItemData(items.get(position));
         holder.setOnItemClickListener(mClickListener);
     }
 
     @Override
     public int getItemCount() {
-        //Log.d("tag","size : "+Integer.toString(items.size()));
         return items.size();
     }
 }
