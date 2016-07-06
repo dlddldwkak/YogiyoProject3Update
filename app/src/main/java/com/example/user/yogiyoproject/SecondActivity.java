@@ -1,10 +1,10 @@
 package com.example.user.yogiyoproject;
 
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 
@@ -19,6 +19,7 @@ public class SecondActivity extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPager;
     SecondAdapter adapter;
+    Toolbar toolbar;
 
     int position;
 
@@ -28,6 +29,8 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+        toolbar = (Toolbar) findViewById(R.id.logo_toolbar);
+        setSupportActionBar(toolbar);
 
         position = getIntent().getIntExtra("category", 0);
         Log.d("tag", Integer.toString(position));
