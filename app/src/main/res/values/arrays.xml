@@ -22,5 +22,14 @@
         <item>"12"</item>
     </string-array>
 
+    <string-array name="spinner_arrange">
+        <item>요기요 랭킹순</item>
+        <item>별점순</item>
+        <item>리뷰 많은순</item>
+        <item>최소 주문 금액순</item>
+        <item>거리순</item>
+        <item>할인율 순</item>
+    </string-array>
+
 
 </resources>

@@ -9,21 +9,30 @@
     tools:context="com.example.user.yogiyoproject.SecondActivity">
 
     <include
-        layout="@layout/logo"
+        layout="@layout/view_logo_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true">
 
+
         <include
             android:id="@+id/second_tab"
             layout="@layout/activity_tablayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <include
+            layout="@layout/view_spinner_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:layout_scrollFlags="scroll|enterAlways" />
 
 
         <android.support.design.widget.AppBarLayout
@@ -34,7 +43,7 @@
             android:fitsSystemWindows="true">
 
             <include
-                layout="@layout/view_toolbar"
+                layout="@layout/view_search_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -42,5 +51,8 @@
 
 
         </android.support.design.widget.AppBarLayout>
+
+
     </android.support.design.widget.CoordinatorLayout>
+
 </LinearLayout>

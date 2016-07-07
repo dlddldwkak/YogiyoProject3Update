@@ -7,12 +7,12 @@
     tools:context="com.example.user.yogiyoproject.MainActivity">
 
     <include
-        layout="@layout/logo"
+        layout="@layout/view_logo_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <include
-        layout="@layout/view_toolbar"
+        layout="@layout/view_search_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal" />

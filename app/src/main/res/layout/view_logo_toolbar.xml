@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:background="@color/logo"
         app:collapseIcon="@mipmap/ic_launcher"
-        app:contentInsetStart="@dimen/logo_contentInsetstart">
+        app:contentInsetStart="@dimen/toolbar_contentInsetstart">
 
         <ImageView
             android:id="@+id/imageView"

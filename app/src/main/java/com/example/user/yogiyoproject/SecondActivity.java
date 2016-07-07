@@ -13,6 +13,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import com.example.user.yogiyoproject.tabView.ChickenTabView;
 import com.example.user.yogiyoproject.tabView.ChinaFoodTabView;
@@ -28,6 +30,8 @@ public class SecondActivity extends AppCompatActivity implements NavigationView.
     SearchView searchView;
     DrawerLayout mDrawerLayout;
     ActionBarDrawerToggle toggle;
+    Spinner mSpinnerRank;
+    Spinner mSpinnerPay;
 
     int position;
 
@@ -37,6 +41,20 @@ public class SecondActivity extends AppCompatActivity implements NavigationView.
         setContentView(R.layout.activity_second);
         toolbar = (Toolbar) findViewById(R.id.logo_toolbar);
         setSupportActionBar(toolbar);
+
+
+        mSpinnerRank = (Spinner) findViewById(R.id.toolbar_spinner_lank);
+        mSpinnerPay = (Spinner) findViewById(R.id.toolbar_spinner_pay);
+
+        ArrayAdapter<String> maArrayAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item);
+        mSpinnerRank.setAdapter(maArrayAdapter);
+        mSpinnerPay.setAdapter(maArrayAdapter);
+
+        String[] lists = getResources().getStringArray(R.array.spinner_arrange);
+        for (int i = 0; i < lists.length; i++) {
+            maArrayAdapter.add(lists[i]);
+        }
+
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.second_drawer_layout);
 
