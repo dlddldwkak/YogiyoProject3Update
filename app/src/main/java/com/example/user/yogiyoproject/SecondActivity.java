@@ -46,7 +46,7 @@ public class SecondActivity extends AppCompatActivity implements NavigationView.
         mSpinnerRank = (Spinner) findViewById(R.id.toolbar_spinner_lank);
         mSpinnerPay = (Spinner) findViewById(R.id.toolbar_spinner_pay);
 
-        ArrayAdapter<String> maArrayAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item);
+        ArrayAdapter<String> maArrayAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_single_choice);
         mSpinnerRank.setAdapter(maArrayAdapter);
         mSpinnerPay.setAdapter(maArrayAdapter);
 

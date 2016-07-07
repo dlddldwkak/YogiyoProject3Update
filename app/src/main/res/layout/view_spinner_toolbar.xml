@@ -21,7 +21,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:padding="5dp" />
+                android:padding="5dp"
+                android:textColor="@color/text_black" />
 
             <Spinner
                 android:id="@+id/toolbar_spinner_pay"
@@ -29,7 +30,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:padding="5dp" />
+                android:padding="5dp"
+
+                />
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 </LinearLayout>
