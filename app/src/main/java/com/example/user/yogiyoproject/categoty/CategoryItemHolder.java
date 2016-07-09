@@ -19,16 +19,23 @@ public class CategoryItemHolder extends RecyclerView.ViewHolder {
         mClickListener = onItemClickListener;
     }
 
-    ImageView image;
+    //어떤 이미지인지? 어떤텍스트 인지?
+
+  /*  ImageView image;
     TextView name;
+    CategoryItemData itemData;
+*/
+
+    ImageView categoryItmImg;
+    TextView categoryItmName;
     CategoryItemData itemData;
 
     public CategoryItemHolder(View itemView) {
         super(itemView);
 
 
-        image = (ImageView) itemView.findViewById(R.id.category_item_image);
-        name = (TextView) itemView.findViewById(R.id.category_item_name);
+        categoryItmImg = (ImageView) itemView.findViewById(R.id.category_item_image);
+        categoryItmName = (TextView) itemView.findViewById(R.id.category_item_name);
 
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,8 +50,8 @@ public class CategoryItemHolder extends RecyclerView.ViewHolder {
 
     public void setItemData(CategoryItemData itemData) {
 
-        image.setBackgroundResource(itemData.getIconId());
-        name.setText(itemData.getName());
+        categoryItmImg.setBackgroundResource(itemData.getIconId());
+        categoryItmName.setText(itemData.getName());
     }
 
 }

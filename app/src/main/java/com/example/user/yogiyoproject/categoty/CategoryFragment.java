@@ -17,7 +17,7 @@ public class CategoryFragment extends Fragment {
     public int[] images = {R.drawable.chicken, R.drawable.chinafood,
             R.drawable.sidefood, R.drawable.koreafood};
     public String[] names;
-    RecyclerView rv;
+    RecyclerView categoryRecyclerView;
     CategoryAdapter mAdapter;
 
     @Override
@@ -25,7 +25,7 @@ public class CategoryFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_category, container, false);
-        rv = (RecyclerView) view.findViewById(R.id.category_recyclerView);
+        categoryRecyclerView = (RecyclerView) view.findViewById(R.id.category_recyclerView);
         mAdapter = new CategoryAdapter();
 
         mAdapter.setOnItemClickLister(new OnItemClickListener() {
@@ -37,7 +37,7 @@ public class CategoryFragment extends Fragment {
             }
         });
 
-        rv.setAdapter(mAdapter);
+        categoryRecyclerView.setAdapter(mAdapter);
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
         gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
@@ -48,7 +48,7 @@ public class CategoryFragment extends Fragment {
         });
 
 
-        rv.setLayoutManager(gridLayoutManager);
+        categoryRecyclerView.setLayoutManager(gridLayoutManager);
         initData();
         return view;
     }

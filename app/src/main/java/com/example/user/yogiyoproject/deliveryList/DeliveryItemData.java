@@ -1,8 +1,6 @@
 package com.example.user.yogiyoproject.deliveryList;
 
-/**
- * Created by user on 2016-07-02.
- */
+
 public class DeliveryItemData {
     private String name;
     private int iconId;

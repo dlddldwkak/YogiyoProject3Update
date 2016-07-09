@@ -12,14 +12,9 @@ import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.example.user.yogiyoproject.tabView.ChickenTabView;
-import com.example.user.yogiyoproject.tabView.ChinaFoodTabView;
-import com.example.user.yogiyoproject.tabView.KoreaFoodTabView;
-import com.example.user.yogiyoproject.tabView.SideFoodTabView;
 
 public class SecondActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -48,6 +43,7 @@ public class SecondActivity extends AppCompatActivity implements NavigationView.
 
         ArrayAdapter<String> maArrayAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_single_choice);
         mSpinnerRank.setAdapter(maArrayAdapter);
+
         mSpinnerPay.setAdapter(maArrayAdapter);
 
         String[] lists = getResources().getStringArray(R.array.spinner_arrange);
@@ -77,10 +73,13 @@ public class SecondActivity extends AppCompatActivity implements NavigationView.
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.removeAllTabs();
         initTab();
+        
+        viewPager.setCurrentItem(position);
     }
 
     public void initTab() {
 
+        /*
         ChickenTabView chickenTabView = new ChickenTabView(getApplicationContext());
         ChinaFoodTabView chinaFoodTabView = new ChinaFoodTabView(getApplicationContext());
         SideFoodTabView sideFoodTabView = new SideFoodTabView(getApplicationContext());
@@ -93,8 +92,16 @@ public class SecondActivity extends AppCompatActivity implements NavigationView.
                 tabLayout.addTab(tabLayout.newTab().setCustomView(tabViews[i]), i, true);
             else
                 tabLayout.addTab(tabLayout.newTab().setCustomView(tabViews[i]), i);
-        }
+        }*/
 
+
+        // 제목하나 넣을탭이라면 차라리 이렇게 하는 것이 효율
+        // 하지만 이미지나 글자의 색깔이나 할 경우에는 view를 따로 정의하는 것이 낫다.
+        String[] tabTileList = getResources().getStringArray(R.array.foodName);
+
+        for (int i = 0; i < tabTileList.length; i++) {
+            tabLayout.addTab(tabLayout.newTab().setText(tabTileList[i]), i);
+        }
     }
 
     @Override
@@ -130,7 +137,8 @@ public class SecondActivity extends AppCompatActivity implements NavigationView.
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+  /*   case 처리!!
+     if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
@@ -142,7 +150,7 @@ public class SecondActivity extends AppCompatActivity implements NavigationView.
 
         } else if (id == R.id.nav_send) {
 
-        }
+        }*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

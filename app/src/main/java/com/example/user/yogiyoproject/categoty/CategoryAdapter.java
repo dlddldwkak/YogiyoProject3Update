@@ -10,9 +10,6 @@ import com.example.user.yogiyoproject.R;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by user on 2016-07-01.
- */
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryItemHolder> {
 
     public static final int VIEW_TYPE_ITEM = 0;

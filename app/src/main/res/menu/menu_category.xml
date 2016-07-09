@@ -5,6 +5,8 @@
         android:id="@+id/menu_order"
         android:icon="@drawable/zzim"
         android:orderInCategory="100"
-        android:title="주문표"
+        android:title="@string/str_menu_table"
         app:showAsAction="always" />
+
+    <!-- android:title="주문표"-->
 </menu>

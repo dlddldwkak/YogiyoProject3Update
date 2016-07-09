@@ -7,9 +7,7 @@ import android.widget.TextView;
 
 import com.example.user.yogiyoproject.R;
 
-/**
- * Created by user on 2016-07-02.
- */
+
 public class DeliveryItemHolder extends RecyclerView.ViewHolder {
 
     ImageView imageView;

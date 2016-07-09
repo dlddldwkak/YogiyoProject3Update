@@ -16,4 +16,17 @@
     <dimen name="toolbar_contentInsetstart">0dp</dimen>
 
 
+    <!--이런식으로도 가능 : 변수명 중요!!!-->
+    <dimen name="layout_margin_5dp">5dp</dimen>
+    <dimen name="layout_margin_15dp">15dp</dimen>
+    <dimen name="layout_margin_20dp">20dp</dimen>
+
+    <dimen name="layout_padding_5dp">5dp</dimen>
+    <dimen name="layout_padding_15dp">15dp</dimen>
+    <dimen name="layout_padding_20dp">20dp</dimen>
+
+    <dimen name="dimens_5dp">5dp</dimen>
+    <dimen name="dimens_15dp">15dp</dimen>
+    <dimen name="dimens_20dp">20dp</dimen>
+
 </resources>

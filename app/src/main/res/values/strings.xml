@@ -8,4 +8,9 @@
     <string name="edittext_search_video">검색</string>
     <string name="item_name_text">음식점이름</string>
 
+
+    <!--추가-->
+    <string name="str_menu_table">메뉴표</string>
+
+
 </resources>
